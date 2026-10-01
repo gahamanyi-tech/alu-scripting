@@ -1,2 +1,6 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/
+from = ARGV[0][/\[from:(.*?)\]/, 1]
+to = ARGV[0][/\[to:(.*?)\]/, 1]
+flags = ARGV[0][/\[flags:(.*?)\]/, 1]
+
+puts "#{from},#{to},#{flags}"
